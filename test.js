@@ -12,8 +12,8 @@
       db = new PouchDB('test', {adapter: 'fruitdown'});
       db.info().then(function(i2) {
         console.log('fruitdown', i2);
-      });
-    });
+      }).catch(console.error.bind(console));
+    }).catch(console.error.bind(console));
   }
 
   // make sure we idb is clear before running the test
